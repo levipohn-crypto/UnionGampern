@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#302E8F" />
+<meta name="description" content="Vereinszeitmanagement und Helferplanung für die Union Gampern." />
+<title>Union Gampern – Vereinszeitmanagement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css" />
+<style>
+  .landing-shell {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 56px 24px 86px;
+  }
+
+  .landing-hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--tanne) 0%, var(--tanne-hell) 100%);
+    color: var(--weiss);
+    border-radius: 28px;
+    padding: 48px;
+    box-shadow: 0 24px 70px -35px rgba(48, 46, 143, 0.65);
+  }
+
+  .landing-hero::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    right: -80px;
+    top: -80px;
+    border-radius: 50%;
+    background: rgba(241, 213, 20, 0.22);
+    border: 22px solid rgba(255,255,255,0.14);
+  }
+
+  .landing-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 670px;
+  }
+
+  .landing-logo {
+    width: 82px;
+    height: 82px;
+    object-fit: contain;
+    border-radius: 999px;
+    background: var(--weiss);
+    padding: 6px;
+    box-shadow: 0 10px 30px -18px rgba(0,0,0,0.45);
+    margin-bottom: 18px;
+  }
+
+  .landing-hero .eyebrow { color: var(--punsch); }
+  .landing-hero h1 {
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.03;
+    margin-bottom: 14px;
+  }
+  .landing-hero .lead {
+    font-size: 16.5px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.86);
+    margin: 0;
+  }
+
+  .choice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 24px;
+  }
+
+  .choice-card {
+    background: var(--weiss);
+    border-radius: 18px;
+    box-shadow: var(--shadow-card);
+    padding: 26px 24px;
+    text-decoration: none;
+    color: var(--tanne);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1.5px solid var(--linie);
+    border-top: 5px solid var(--punsch);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    min-height: 185px;
+  }
+  .choice-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 0 var(--linie), 0 18px 34px -20px rgba(48, 46, 143, 0.38);
+  }
+
+  .choice-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--tanne);
+    color: var(--weiss);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 17px;
+  }
+  .choice-card.admin-card .choice-icon {
+    background: var(--punsch);
+    color: var(--tanne);
+  }
+
+  .choice-card h3 { font-size: 20px; margin-top: 4px; }
+  .choice-card p {
+    font-size: 14px;
+    color: var(--grau);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .choice-card .go {
+    margin-top: auto;
+    font-size: 13.5px;
+    font-weight: 800;
+    color: var(--tanne-hell);
+  }
+
+  .demo-note {
+    margin-top: 18px;
+    background: rgba(241, 213, 20, 0.18);
+    border: 1.5px solid rgba(241, 213, 20, 0.48);
+    color: var(--tanne);
+    border-radius: 14px;
+    padding: 14px 16px;
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 760px) {
+    .landing-shell { padding: 28px 16px 64px; }
+    .landing-hero { padding: 28px 22px; border-radius: 22px; }
+    .landing-logo { width: 68px; height: 68px; }
+    .choice-grid { grid-template-columns: 1fr; }
+    .choice-card { min-height: unset; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <img class="brand-logo" src="union-gampern-logo.png" alt="Union Gampern Logo" />
+    <div class="brand-text">
+      <div class="verein">Union Gampern</div>
+      <div class="tag">Vereinszeitmanagement</div>
+    </div>
+  </div>
+</header>
+
+<main class="landing-shell">
+  <section class="landing-hero">
+    <div class="landing-hero-inner">
+      <img class="landing-logo" src="union-gampern-logo.png" alt="Union Gampern Logo" />
+      <span class="eyebrow">Union Gampern · seit 1970</span>
+      <h1>Helfer, Schichten und Events sauber organisieren.</h1>
+      <p class="lead">Eine einfache Demo für Vereinsfeste, Heimspiele, Nachwuchsturniere und interne Dienste. Mitglieder sehen freie Schichten direkt am Handy, der Admin behält den Überblick.</p>
+    </div>
+  </section>
+
+  <section class="choice-grid" aria-label="Bereich auswählen">
+    <a class="choice-card" href="helfer.html">
+      <div class="choice-icon">H</div>
+      <h3>Helferseite öffnen</h3>
+      <p>Events ansehen und dich schnell für eine freie Schicht eintragen – optimiert für Smartphone und Desktop.</p>
+      <span class="go">Zur öffentlichen Seite →</span>
+    </a>
+
+    <a class="choice-card admin-card" href="admin.html">
+      <div class="choice-icon">A</div>
+      <h3>Admin-Bereich öffnen</h3>
+      <p>Events anlegen, Schichten bearbeiten, private Links erstellen und Helferlisten als CSV exportieren.</p>
+      <span class="go">Zum Admin-Bereich →</span>
+    </a>
+  </section>
+
+  <div class="demo-note">
+    <strong>Backend-Hinweis:</strong> Diese Version ist für Firebase vorbereitet. Solange in <code>firebase-config.js</code> noch Platzhalter stehen, läuft sie lokal im Browser. Nach dem Einfügen deiner Firebase-Daten werden Eintragungen zentral gespeichert.
+  </div>
+</main>
+
+</body>
+</html>
